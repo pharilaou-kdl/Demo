@@ -10,6 +10,6 @@ public class DemoController {
 
     @GetMapping("/")
     public String demoMethod () {
-        return "Heeeey!!!";
+        return "Heeeey!!";
     }
 }
