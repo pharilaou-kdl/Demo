@@ -27,9 +27,9 @@ jobs:
           java-version: 17
           distribution: 'corretto'
 
-      # - name: Compile Project
-      #   run: |
-      #    ./mvnw clean compile
+      - name: Compile Project
+        run: |
+         ./mvnw clean compile
 
         
 
