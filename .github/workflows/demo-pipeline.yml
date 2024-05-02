@@ -14,7 +14,7 @@ on:
 jobs:
   compile:
     name: Compile Demo App
-    runs-on: ubuntu
+    runs-on: self-hosted
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
