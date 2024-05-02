@@ -12,16 +12,10 @@ RUN mvn clean package -DskipTests
 
 FROM amazoncorretto:17
 
-#ARG PROFILE=dev
-ARG APP_VERSION=0.0.1
-
 WORKDIR /app
 
 COPY --from=build /build/target/demo-*.jar /app/
 
 EXPOSE 8080
 
-#ENV ACTIVE_PROFILE=${PROFILE}
-ENV JAR_VERSION=${APP_VERSION}
-
-CMD java -jar demo-${JAR_VERSION}.jar
+CMD java -jar demo-0.0.1.jar
