@@ -21,12 +21,11 @@ jobs:
       #   with:
       #     fetch-depth: 0
 
-      - name: Setup JDK
-        uses: actions/setup-java@v3
-        with:
-          java-version: 17
-          distribution: 'corretto'
-          cache: maven
+      # - name: Setup JDK
+      #   uses: actions/setup-java@v3
+      #   with:
+      #     java-version: 17
+      #     distribution: 'corretto'
 
       - name: Compile Project
         run: |
