@@ -14,12 +14,12 @@ on:
 jobs:
   compile:
     name: Compile Demo App
-    runs-on: ubuntu
+    runs-on: self-hosted
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+      # - name: Checkout code
+      #   uses: actions/checkout@v4
+      #   with:
+      #     fetch-depth: 0
 
       - name: Setup JDK
         uses: actions/setup-java@v4
