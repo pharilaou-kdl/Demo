@@ -22,7 +22,7 @@ jobs:
           fetch-depth: 0
 
       - name: Setup JDK
-        uses: actions/stup-java@v4
+        uses: actions/stup-jdk@v4
         with:
           java-version: 17
           distribution: 'corretto'
