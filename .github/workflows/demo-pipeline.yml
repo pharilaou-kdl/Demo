@@ -29,7 +29,8 @@ jobs:
 
       - name: Compile Project
         run: |
-          ./mvnw clean compile
+         Set-ExecutionPolicy Bypass -Scope Process
+         ./mvnw clean compile
 
         
 
