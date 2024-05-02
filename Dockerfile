@@ -23,8 +23,5 @@ EXPOSE 8080
 
 #ENV ACTIVE_PROFILE=${PROFILE}
 ENV JAR_VERSION=${APP_VERSION}
-ENV EMAIL_HOSTNAME=missing_host_name
-ENV EMAIL_USER_NAME=missing_USER_name
-ENV EMAIL_PASSWORD=missing_user_pasword
 
 CMD java -jar demo-${JAR_VERSION}.jar
