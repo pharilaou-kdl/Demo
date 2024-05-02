@@ -16,26 +16,23 @@ jobs:
     name: Compile Demo App
     runs-on: self-hosted
     steps:
-      # - name: Checkout code
-      #   uses: actions/checkout@v4
-      #   with:
-      #     fetch-depth: 0
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
 
       - name: Setup JDK
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v3
         with:
           java-version: 17
           distribution: 'corretto'
+          cache: maven
 
       - name: Compile Project
         run: |
-          ./mvnw clean compile
+          ./mvnw -B package --file pom.xml
 
-      - name: Package Project
-        run: |
-         mkdir -p packaged
-         cp target/*.jar packaged/
-         zip -r project.zip packaged/    
+        
 
   # unit-tests:
   #   name: Unit Tests
