@@ -98,8 +98,8 @@ jobs:
       - name: Login to DockerHub
         uses: docker/login-action@v3
         with:
-          username: ${{ secrets.DOCKERHUB_USRNAME}}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          username: ${{secrets.DOCKERHUB_USRNAME}}
+          password: ${{secrets.DOCKERHUB_TOKEN}}
 
       - name: Build and Push to Docker
         uses: docker/build-push-action@v5
@@ -108,7 +108,7 @@ jobs:
           file: Dockerfile
           push: true
           platform: linux/amd64
-          tags: ${{ secrets.DOCKERHUB_USRNAME }}
+          tags: ${{secrets.DOCKERHUB_USRNAME}}/ci-cd:latest
 
 #  deploy:
 #    name: Deploy App
