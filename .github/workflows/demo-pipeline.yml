@@ -110,7 +110,6 @@ jobs:
           context: .
           file: Dockerfile
           push: true
-          platform: linux/amd64
           tags: ${{secrets.DOCKERHUB_USRNAME}}/ci-cd:latest
 
 #  deploy:
