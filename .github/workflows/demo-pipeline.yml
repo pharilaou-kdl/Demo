@@ -31,6 +31,12 @@ jobs:
         run: |
           ./mvnw clean compile
 
+      - name: Package Project
+        run: |
+         mkdir -p packaged
+         cp target/*.jar packaged/
+         zip -r project.zip packaged/    
+
   # unit-tests:
   #   name: Unit Tests
   #   runs-on: ubuntu
