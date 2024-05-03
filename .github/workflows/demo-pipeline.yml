@@ -115,6 +115,7 @@ jobs:
           build-args: 
            APP_VERSION=${{steps.extract_version.outputs.VERSION}}
 
+
 #  deploy:
 #    name: Deploy App
 #    runs-on: ubuntu-latest
