@@ -123,13 +123,12 @@ jobs:
    needs: [build-image]
    steps:
      - name: SSH into VPS and deploy
-     # - uses: actions/checkout@v4
-     - uses: webfactory/ssh-agent@v0.9.0
+       uses: appleboy/ssh-action@v1.0.3
        with:
-        # host: ${{ secrets.VPS_HOST }}
-        # username: ${{ secrets.VPS_USERNAME }}
+        host: ${{ secrets.VPS_HOST }}
+        username: ${{ secrets.VPS_USERNAME }}
         key: ${{ secrets.SSH }}
-        passphrase: ${{ secrets.SSH_PASSPHRASE }}
+        # passphrase: ${{ secrets.SSH_PASSPHRASE }}
         # password: ${{ secrets.VPS_PASSWORD }}
         script: |
           cd Demo
