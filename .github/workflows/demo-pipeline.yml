@@ -123,14 +123,16 @@ jobs:
    needs: [build-image]
    steps:
      - name: SSH into VPS and deploy
-       uses: appleboy/ssh-action@master
+       uses: appleboy/ssh-action@v0.1.10
        with:
         host: ${{ secrets.VPS_HOST }}
         username: ${{ secrets.VPS_USERNAME }}
         key: ${{ secrets.SSH }}
-        passphrase: ${{ secrets.SSH_PASSPHRASE }}
+        passphrase: ${{ SSH_PASSPHRASE }}
+        password: ${{ secrets.VPS_PASSWORD }}
         script: |
-          cd Demo
-          git pull ${{ secrets.DEMO_GIT }}
-          docker build -t demo .
-          docker run -p 8080:8080 demo  
+          whoami
+          # cd Demo
+          # git pull ${{ secrets.DEMO_GIT }}
+          # docker build -t demo .
+          # docker run -p 8080:8080 demo  
