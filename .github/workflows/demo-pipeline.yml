@@ -132,6 +132,6 @@ jobs:
         script: |
           cd Demo
           git pull ${{ secrets.DEMO_GIT }}
-          # docker build -t demo .
-          # docker run -p 8080:8080 demo 
+          docker build -t demo .
+          docker run -p 8080:8080 demo 
           
