@@ -129,10 +129,7 @@ jobs:
         username: ${{ secrets.VPS_USERNAME }}
         key: ${{ secrets.SSH }}
         passphrase: ${{ SSH_PASSPHRASE }}
-        password: ${{ secrets.VPS_PASSWORD }}
+        # password: ${{ secrets.VPS_PASSWORD }}
         script: |
           whoami
-          # cd Demo
-          # git pull ${{ secrets.DEMO_GIT }}
-          # docker build -t demo .
-          # docker run -p 8080:8080 demo  
+          
