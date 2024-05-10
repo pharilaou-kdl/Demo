@@ -128,7 +128,7 @@ jobs:
         host: ${{ secrets.VPS_HOST }}
         username: ${{ secrets.VPS_USERNAME }}
         key: ${{ secrets.SSH }}
-        passphrase: ${{ SSH_PASSPHRASE }}
+        passphrase: ${{ secrets.SSH_PASSPHRASE }}
         # password: ${{ secrets.VPS_PASSWORD }}
         script: |
           whoami
