@@ -128,9 +128,7 @@ jobs:
         username: ${{ secrets.VPS_USERNAME }}
         key: ${{ secrets.SSH }}
         passphrase: ${{ secrets.SSH_PASSPHRASE }}
-        # password: ${{ secrets.VPS_PASSWORD }}
         script: |
-          cd Demo
-          git pull ${{ secrets.DEMO_GIT }}
+          docker pull ${{secrets.DOCKERHUB_USRNAME}}/ci-cd:latest
           docker build -t demo .
           docker run -p 8080:8080 demo 
