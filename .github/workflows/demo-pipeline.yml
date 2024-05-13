@@ -130,4 +130,4 @@ jobs:
         passphrase: ${{ secrets.SSH_PASSPHRASE }}
         script: |
           docker pull ${{secrets.DOCKERHUB_USRNAME}}/ci-cd:latest
-          docker run -p 8080:8080 ${{secrets.DOCKERHUB_USRNAME}}//ci-cd:latest
+          docker run -p 8080:8080 latest
